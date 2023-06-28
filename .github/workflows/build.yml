@@ -11,6 +11,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: Tokito-Kun/android-public-build@main
+      - uses: Tokito-Kun/android-public-build@subrelease
         with:
             token: ${{ secrets.GITHUB_TOKEN }}
