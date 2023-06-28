@@ -1,0 +1,16 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    permissions: write-all
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Tokito-Kun/android-public-build@main
+        with:
+            token: ${{ secrets.GITHUB_TOKEN }}
