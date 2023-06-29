@@ -15,7 +15,7 @@ class MainApplication: MultiDexApplication()
 
         init
         {
-         val customBuilder = Shell.Builder.createDefault()
+         val customBuilder = Shell.Builder.create()
             .setFlags(Shell.FLAG_REDIRECT_STDERR)
             .verbose(BuildConfig.DEBUG)
             .setTimeout(10)
