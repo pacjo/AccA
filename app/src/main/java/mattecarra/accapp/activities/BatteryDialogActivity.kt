@@ -36,7 +36,6 @@ import mattecarra.accapp.viewmodel.ProfilesViewModel
 import mattecarra.accapp.viewmodel.SharedViewModel
 import xml.*
 import com.topjohnwu.superuser.ShellUtils
-import com.topjohnwu.superuser.ips.RootService.getApplicationContext
 import mattecarra.accapp.Preferences
 import mattecarra.accapp.databinding.EditChargingLimitOnceDialogBinding
 import mattecarra.accapp.utils.LogExt
