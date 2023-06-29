@@ -66,7 +66,7 @@ class ScriptesFragment : ScopedFragment(), OnScriptClickListener
         binding.scriptsRecyclerView.adapter = mScriptesAdapter
         binding.scriptsRecyclerView.layoutManager = LinearLayoutManager(mContext)
 
-        mScriptsViewModel = ViewModelProvider.of(this).get(ScriptsViewModel::class.java)
+        mScriptsViewModel = ViewModelProvider(this).get(ScriptsViewModel::class.java)
 
         // Observe data
         mScriptsViewModel.getLiveData().observe(viewLifecycleOwner, Observer { scripts ->

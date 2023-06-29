@@ -41,7 +41,7 @@ class SchedulesFragment : ScopedFragment(), OnScheduleClickListener {
 
 
         activity?.let { activity ->
-            viewModel = ViewModelProvider.of(activity).get(SchedulesViewModel::class.java)
+            viewModel = ViewModelProvider(activity).get(SchedulesViewModel::class.java)
 
             adapter = ScheduleProfileListAdapter(activity)
             adapter.setOnClickListener(this)

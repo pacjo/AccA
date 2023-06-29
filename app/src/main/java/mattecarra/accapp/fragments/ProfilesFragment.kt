@@ -101,7 +101,7 @@ class ProfilesFragment : ScopedFragment(),
         profilesRecycler.adapter = mProfilesAdapter
         profilesRecycler.layoutManager = LinearLayoutManager(mContext)
 
-        mProfilesViewModel = ViewModelProvider.of(this).get(ProfilesViewModel::class.java)
+        mProfilesViewModel = ViewModelProviders(this).get(ProfilesViewModel::class.java)
 
         // Observe data
         mProfilesViewModel.getLiveData().observe(viewLifecycleOwner, Observer { profiles ->
