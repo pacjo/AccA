@@ -1,7 +1,9 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-parcelize'
-apply plugin: 'com.google.devtools.ksp'
+plugins {
+  id 'com.android.application'
+  id 'kotlin-android'
+  id 'kotlin-parcelize'
+  id 'com.google.devtools.ksp'
+}
 
 android {
     compileSdkVersion 33
@@ -104,7 +106,7 @@ dependencies {
     // Kotlin JSON Library for exporting and importing
     implementation 'com.squareup.moshi:moshi:1.15.0'
     implementation 'com.squareup.moshi:moshi-kotlin:1.15.0'
-    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
+    ksp "com.squareup.moshi:moshi-kotlin-codegen:1.15.0"
 
 
     // Fragment KTX module
