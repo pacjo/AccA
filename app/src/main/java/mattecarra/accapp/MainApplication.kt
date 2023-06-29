@@ -5,7 +5,6 @@ import android.app.Application
 import androidx.multidex.MultiDexApplication
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.topjohnwu.superuser.Shell
-import com.topjohnwu.superuser.Shell.Config
 import mattecarra.accapp.utils.LogExt
 
 class MainApplication: MultiDexApplication()
@@ -16,9 +15,12 @@ class MainApplication: MultiDexApplication()
 
         init
         {
-            Shell.Config.setFlags(Shell.FLAG_REDIRECT_STDERR)
-            Shell.Config.verboseLogging(BuildConfig.DEBUG)
-            Shell.Config.setTimeout(10)
+            val customBuilder = Shell.Builder()
+            .setFlags(Shell.FLAG_REDIRECT_STDERR)
+            .verbose(BuildConfig.DEBUG)
+            .setTimeout(10)
+
+            Shell.setDefaultBuilder(customBuilder)
         }
     }
 
