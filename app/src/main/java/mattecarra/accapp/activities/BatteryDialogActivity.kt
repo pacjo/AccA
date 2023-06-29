@@ -36,6 +36,7 @@ import mattecarra.accapp.viewmodel.ProfilesViewModel
 import mattecarra.accapp.viewmodel.SharedViewModel
 import xml.*
 import com.topjohnwu.superuser.ShellUtils
+import com.topjohnwu.superuser.ips.RootService.getApplicationContext
 import mattecarra.accapp.Preferences
 import mattecarra.accapp.databinding.EditChargingLimitOnceDialogBinding
 import mattecarra.accapp.utils.LogExt
@@ -130,13 +131,13 @@ class BatteryDialogActivity : ScopedAppActivity()
             {
                 val intent = Intent()
                 intent.action = "android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
-                intent.data = Uri.parse("package:" + context.packageName)
+                intent.data = Uri.parse("package:" + applicationContext.packageName)
                 startActivity(intent)
                 finish()
             }
             catch (e: Exception)
             {
-                Toast.makeText(context, getString(R.string.battery_optimization_fail), Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, getString(R.string.battery_optimization_fail), Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -147,11 +148,11 @@ class BatteryDialogActivity : ScopedAppActivity()
             LogExt().d(javaClass.simpleName, "onClick_OpenAccA")
             finish()
 
-            ContextCompat.startActivity(context.applicationContext,
-                Intent(context.applicationContext, MainActivity::class.java)
+            ContextCompat.startActivity(applicationContext.applicationContext,
+                Intent(applicationContext.applicationContext, MainActivity::class.java)
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK).putExtras(intent), null)
 
-            //val intent = context.packageManager.getLaunchIntentForPackage(packageName)
+            //val intent = applicationContext.packageManager.getLaunchIntentForPackage(packageName)
             //startActivity(intent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
         }
 
