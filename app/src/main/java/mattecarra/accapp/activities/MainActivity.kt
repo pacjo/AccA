@@ -501,9 +501,9 @@ class MainActivity : ScopedAppActivity(), BottomNavigationView.OnNavigationItemS
         // Set theme
         setTheme()
 
-       public void executeCommandWithRoot() {
-       Shell.su("su").exec();
-
+      fun executeCommandWithRoot() {
+       val command = "su"
+       Shell.su(command).exec()
        if (Shell.isAppGrantedRoot() != true)
        {
                 MaterialDialog(this).show {
