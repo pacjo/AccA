@@ -20,7 +20,7 @@ class MainApplication: MultiDexApplication()
             .setTimeout(10)
 
          if (BuildConfig.DEBUG) {
-            customBuilder.setFlags(Shell.FLAG_VERBOSE_LOGGING)
+            customBuilder.verboseLogging(true)
          }
 
          Shell.setDefaultBuilder(customBuilder)
