@@ -501,7 +501,7 @@ class MainActivity : ScopedAppActivity(), BottomNavigationView.OnNavigationItemS
         // Set theme
         setTheme()
 
-        if (!Shell.isAppGrantedRoot())
+        if (Shell.isAppGrantedRoot() != true)
         {
             MaterialDialog(this).show {
                 title(R.string.tile_acc_no_root)
