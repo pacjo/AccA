@@ -501,9 +501,12 @@ class MainActivity : ScopedAppActivity(), BottomNavigationView.OnNavigationItemS
         // Set theme
         setTheme()
 
-        if (Shell.isAppGrantedRoot() != true)
-        {
-            MaterialDialog(this).show {
+       public void executeCommandWithRoot() {
+       Shell.su("su").exec();
+
+       if (Shell.isAppGrantedRoot() != true)
+       {
+                MaterialDialog(this).show {
                 title(R.string.tile_acc_no_root)
                 message(R.string.no_root_message)
                 positiveButton(android.R.string.ok) { finish() }
@@ -520,6 +523,7 @@ class MainActivity : ScopedAppActivity(), BottomNavigationView.OnNavigationItemS
             checkWritePermission(this)
             initUi()
         }
+      }
     }
 
     fun checkWritePermission(context: Context)
