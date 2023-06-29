@@ -18,9 +18,7 @@ android {
         multiDexEnabled true
 
         ksp {
-            arguments {
                 arg("room.schemaLocation", "$projectDir/schemas".toString())
-            }
         }
     }
     buildTypes {
