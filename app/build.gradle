@@ -4,11 +4,11 @@ apply plugin: 'kotlin-parcelize'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
     defaultConfig {
         applicationId "mattecarra.accapp"
         minSdkVersion 31
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode 39
         versionName "1.0.35"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
