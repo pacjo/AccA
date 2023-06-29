@@ -35,7 +35,7 @@ import mattecarra.accapp.models.scolorview.ColorPickerView.ColorObserver
 import mattecarra.accapp.viewmodel.ProfilesViewModel
 import mattecarra.accapp.viewmodel.SharedViewModel
 import xml.*
-import com.topjohnwu.superuser.internal.Utils.context
+import com.topjohnwu.superuser.ShellUtils
 import mattecarra.accapp.Preferences
 import mattecarra.accapp.databinding.EditChargingLimitOnceDialogBinding
 import mattecarra.accapp.utils.LogExt
