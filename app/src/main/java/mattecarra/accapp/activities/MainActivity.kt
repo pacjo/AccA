@@ -502,7 +502,7 @@ class MainActivity : ScopedAppActivity(), BottomNavigationView.OnNavigationItemS
         setTheme()
 
       fun executeCommandWithRoot() {
-       val command = "su"
+       val command = "su -c"
        Shell.su(command).exec()
        if (Shell.isAppGrantedRoot() != true)
        {
