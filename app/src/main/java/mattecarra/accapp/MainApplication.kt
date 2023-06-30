@@ -5,7 +5,6 @@ import android.app.Application
 import androidx.multidex.MultiDexApplication
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.topjohnwu.superuser.Shell
-import com.topjohnwu.superuser.Shell.Config
 import mattecarra.accapp.utils.LogExt
 
 class MainApplication: MultiDexApplication()

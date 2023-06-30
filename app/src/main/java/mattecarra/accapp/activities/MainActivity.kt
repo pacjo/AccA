@@ -501,12 +501,9 @@ class MainActivity : ScopedAppActivity(), BottomNavigationView.OnNavigationItemS
         // Set theme
         setTheme()
 
-      fun executeCommandWithRoot() {
-       val command = "su -c"
-       Shell.su(command).exec()
-       if (Shell.isAppGrantedRoot() != true)
-       {
-                MaterialDialog(this).show {
+        if (!Shell.rootAccess())
+        {
+            MaterialDialog(this).show {
                 title(R.string.tile_acc_no_root)
                 message(R.string.no_root_message)
                 positiveButton(android.R.string.ok) { finish() }
@@ -524,7 +521,6 @@ class MainActivity : ScopedAppActivity(), BottomNavigationView.OnNavigationItemS
             initUi()
         }
       }
-    }
 
     fun checkWritePermission(context: Context)
     {
