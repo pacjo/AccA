@@ -23,16 +23,14 @@ android {
     }
     buildTypes {
         debug {
-            setUnsigned(true)
+            signingConfig null
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            outputFileName = "app-debug.unsigned.apk"
         }
         release {
-            setUnsigned(true)
+            signingConfig null
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            outputFileName = "app-release-unsigned.apk"
         }
     }
     compileOptions {
