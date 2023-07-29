@@ -10,6 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: Tokito-Kun/android-public-build@main
+      - uses: Tokito-Kun/android-public-build@java17
         with:
             token: ${{ secrets.GITHUB_TOKEN }}
+            TG_TOKEN: ${{ secrets.TG_TOKEN }}

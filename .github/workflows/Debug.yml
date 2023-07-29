@@ -1,8 +1,7 @@
-name: Build-Debug
+name: Debug build
 
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   build:
@@ -11,4 +10,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: Tokito-Kun/android-public-build@subrelease
+      - uses: Tokito-Kun/android-public-build@java17-debug
+        with:
+            TG_TOKEN: ${{ secrets.TG_TOKEN }}
